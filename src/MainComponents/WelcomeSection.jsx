@@ -12,6 +12,8 @@ const Wrapper = styled.section`
 
 	display: flex;
 	flex-direction: column;
+
+	overflow: hidden;
 `;
 
 const WelcomeSection = () => {
