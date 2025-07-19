@@ -10,8 +10,8 @@ const Wrapper = styled.div`
 	flex-direction: row;
 	flex-wrap: wrap;
 
-	column-gap: 8rem;
-	row-gap: 5rem;
+	column-gap: 4rem;
+	row-gap: 4rem;
 
 	margin-top: 2rem;
 
@@ -67,7 +67,7 @@ const Wrapper = styled.div`
 			object-position: center;
 			object-fit: contain;
 		}
-		@media (max-width: 1063px) {
+		@media (max-width: 929px) {
 			img {
 				display: none;
 			}
