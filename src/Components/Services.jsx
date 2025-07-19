@@ -4,14 +4,9 @@ const Wrapper = styled.div`
 	width: 100%;
 	height: auto;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-
-	column-gap: 4rem;
-	row-gap: 4rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+	gap: 6rem;
 
 	margin-top: 2rem;
 
@@ -23,6 +18,8 @@ const Wrapper = styled.div`
 		flex-direction: column;
 		justify-content: start;
 		align-items: center;
+
+		justify-self: center;
 
 		width: 15.5rem;
 		height: 15.5rem;
@@ -36,6 +33,7 @@ const Wrapper = styled.div`
 		text-align: center;
 
 		z-index: 2;
+
 		img {
 			width: 4rem;
 			height: 4rem;
@@ -45,10 +43,10 @@ const Wrapper = styled.div`
 			overflow: hidden;
 		}
 	}
+
 	#image {
 		position: absolute;
 		top: 0;
-
 		width: 100%;
 		height: 100%;
 
@@ -61,17 +59,29 @@ const Wrapper = styled.div`
 			height: 100%;
 			background-color: rgba(255, 255, 255, 0.5);
 		}
+
 		img {
 			height: 100%;
 			width: 100%;
 			object-position: center;
 			object-fit: contain;
 		}
-		@media (max-width: 929px) {
+
+		@media (max-width: 999px) {
 			img {
 				display: none;
 			}
 		}
+	}
+
+	@media (min-width: 0px) {
+		grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+		justify-content: center;
+	}
+
+	@media (min-width: 1000px) {
+		grid-template-columns: repeat(3, 15.5rem);
+		justify-content: center;
 	}
 `;
 

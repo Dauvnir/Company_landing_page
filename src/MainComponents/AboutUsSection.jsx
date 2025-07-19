@@ -31,7 +31,7 @@ const Wrapper = styled.section`
 
 		@media (min-width: 1024px) {
 			left: initial;
-			right: 5%;
+			right: 10%;
 			bottom: 0;
 			transform: none;
 			height: 100%;

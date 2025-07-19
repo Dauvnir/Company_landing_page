@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 		@media (max-width: 1023px) {
 			width: clamp(20rem, 13.776rem + 33.2vw, 35rem);
 		}
-		width: 45%;
+		width: 40%;
 		height: auto;
 		img {
 			width: 100%;
@@ -40,6 +40,8 @@ const Wrapper = styled.div`
 		span {
 			color: black;
 			font-size: 1.75rem;
+
+			text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 		}
 	}
 `;
@@ -61,14 +63,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-
-/* 
-			<img id="cncTeam" src="cncTeam.jpeg" alt="teamImage" />
-			<p>
-				<span>
-					From large-format printing and CNC cutting to custom stickers, labels, and magnets — we design, print, and create tailored solutions that
-					stick. Need something unique? You can even design it yourself with our easy online creator.
-				</span>
-				<img src="hand.png" alt="hand" />
-			</p>
-*/
