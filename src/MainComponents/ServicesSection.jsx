@@ -21,7 +21,7 @@ const Wrapper = styled.section`
 
 const ServicesSection = () => {
 	return (
-		<Wrapper>
+		<Wrapper id="servicesLink">
 			<h3>Services</h3>
 			<Services />
 		</Wrapper>

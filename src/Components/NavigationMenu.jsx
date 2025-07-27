@@ -1,6 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useEffect, useState } from "react";
+
+const AuraPulsing = keyframes`
+  0% { 
+	box-shadow: none;
+}
+  50% {
+	box-shadow: 0 0 20px 10px rgba(190, 0, 0, 0.5);
+  }
+  100% {
+	box-shadow: none;
+  }`;
 
 const Wrapper = styled.div`
 	display: inline-flex;
@@ -62,7 +73,13 @@ const Wrapper = styled.div`
 				cursor: pointer;
 				transition: color 0.5s ease;
 				&:hover {
-					color: #d8d8d8;
+					color: #bebebe;
+				}
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					color: inherit;
 				}
 			}
 		}
@@ -79,10 +96,9 @@ const Wrapper = styled.div`
 
 			cursor: pointer;
 
-			transition: box-shadow 0.5s ease;
-			&:hover {
-				box-shadow: 0px 0px 20px 10px rgba(190, 0, 0, 0.2);
-			}
+			transition: box-shadow 0.5s ease-in-out;
+
+			animation: ${AuraPulsing} 3s ease-in-out infinite;
 		}
 	}
 	#extendedMenu {
@@ -110,6 +126,13 @@ const Wrapper = styled.div`
 			li {
 				cursor: pointer;
 				padding-block: 1rem;
+
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					color: inherit;
+				}
 			}
 		}
 
@@ -155,21 +178,37 @@ const NavigationMenu = () => {
 			</div>
 			<div id="desktopMenu">
 				<ul>
-					<li>Home</li>
-					<li>Services</li>
-					<li>About</li>
-					<li>Contact</li>
+					<li>
+						<a href="#homeLink">Home</a>
+					</li>
+					<li>
+						<a href="#servicesLink">Services</a>
+					</li>
+					<li>
+						<a href="#aboutusLink">About Us</a>
+					</li>
+					<li>
+						<a href="#contactLink">Contact</a>
+					</li>
 				</ul>
 				<button>
 					<span>PL</span>
 				</button>
 			</div>
 			<div id="extendedMenu">
-				<ul>
-					<li>Home</li>
-					<li>Services</li>
-					<li>About</li>
-					<li>Contact</li>
+				<ul onClick={menuStateHandler}>
+					<li>
+						<a href="#homeLink">Home</a>
+					</li>
+					<li>
+						<a href="#servicesLink">Services</a>
+					</li>
+					<li>
+						<a href="#aboutusLink">About Us</a>
+					</li>
+					<li>
+						<a href="#contactLink">Contact</a>
+					</li>
 				</ul>
 				<button>
 					<span>PL</span>

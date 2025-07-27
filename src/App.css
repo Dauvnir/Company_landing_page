@@ -9,6 +9,8 @@ colors ?
 * {
 	box-sizing: border-box;
 	font-family: "Nunito Sans", sans-serif;
+
+	scroll-behavior: smooth;
 }
 
 #root {
@@ -68,4 +70,8 @@ h4 {
 p {
 	font-size: 1.25rem;
 	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
 }

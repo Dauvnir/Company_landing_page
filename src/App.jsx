@@ -5,6 +5,7 @@ import ReviewsSection from "./MainComponents/ReviewsSection";
 import ServicesSection from "./MainComponents/ServicesSection";
 import TrustedBySection from "./MainComponents/TrustedBySection";
 import WelcomeSection from "./MainComponents/WelcomeSection";
+import Footer from "./MainComponents/Footer";
 function App() {
 	return (
 		<>
@@ -14,6 +15,7 @@ function App() {
 			<AboutUsSection />
 			<ReviewsSection />
 			<ContactSection />
+			<Footer />
 		</>
 	);
 }

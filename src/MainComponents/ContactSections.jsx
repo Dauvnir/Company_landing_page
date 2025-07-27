@@ -71,7 +71,7 @@ const Wrapper = styled.section`
 
 const ContactSection = () => {
 	return (
-		<Wrapper>
+		<Wrapper id="contactLink">
 			<div className="contact">
 				<h3>Contact</h3>
 				<Form />

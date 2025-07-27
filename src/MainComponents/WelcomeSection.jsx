@@ -18,7 +18,7 @@ const Wrapper = styled.section`
 
 const WelcomeSection = () => {
 	return (
-		<Wrapper>
+		<Wrapper id="homeLink">
 			<NavigationMenu />
 			<WelcomeMessage />
 		</Wrapper>

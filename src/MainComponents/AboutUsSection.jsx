@@ -53,7 +53,7 @@ const Wrapper = styled.section`
 
 const AboutUsSection = () => {
 	return (
-		<Wrapper>
+		<Wrapper id="aboutusLink">
 			<h3>About us</h3>
 			<AboutUs />
 			<img id="bgImg" src="hand.png" alt="hand" />

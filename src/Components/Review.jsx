@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 		top: 0;
 		left: 0;
 		height: 100%;
-		width: 5rem;
+		width: 3rem;
 		background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 		z-index: 1;
 	}
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 		top: 0;
 		right: 0;
 		height: 100%;
-		width: 5rem;
+		width: 3rem;
 		background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 		z-index: 1;
 	}

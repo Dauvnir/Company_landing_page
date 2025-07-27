@@ -37,7 +37,8 @@ const Wrapper = styled.div`
 		width: 100%;
 		height: 40%;
 		button {
-			padding: 1.5rem;
+			height: 6rem;
+			width: 12rem;
 
 			outline: none;
 			border: none;
@@ -50,8 +51,16 @@ const Wrapper = styled.div`
 
 			animation: ${AuraPulsing} 3s ease-in-out infinite;
 
-			span {
-				font-size: 1.5rem;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+
+				display: grid;
+				place-items: center;
+				span {
+					font-size: 1.5rem;
+				}
 			}
 		}
 	}
@@ -68,7 +77,9 @@ const WelcomeMessage = () => {
 
 			<div>
 				<button>
-					<span>Contact Us</span>
+					<a href="#contactLink">
+						<span>Contact Us</span>
+					</a>
 				</button>
 			</div>
 		</Wrapper>
