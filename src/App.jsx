@@ -1,5 +1,6 @@
 import "./App.css";
 import AboutUsSection from "./MainComponents/AboutUsSection";
+import ContactSection from "./MainComponents/ContactSections";
 import ReviewsSection from "./MainComponents/ReviewsSection";
 import ServicesSection from "./MainComponents/ServicesSection";
 import TrustedBySection from "./MainComponents/TrustedBySection";
@@ -12,6 +13,7 @@ function App() {
 			<TrustedBySection />
 			<AboutUsSection />
 			<ReviewsSection />
+			<ContactSection />
 		</>
 	);
 }

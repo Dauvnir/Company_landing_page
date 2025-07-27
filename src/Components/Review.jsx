@@ -15,13 +15,37 @@ const Wrapper = styled.div`
 	align-items: center;
 	justify-content: start;
 
-	width: 100%;
-	height: 100%;
+	flex-grow: 1;
+	padding-block: 1rem;
 
-	margin-top: 3rem;
+	width: 100%;
+
 	margin-bottom: 2rem;
 
+	position: relative;
+
 	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 5rem;
+		background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		z-index: 1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 5rem;
+		background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		z-index: 1;
+	}
 	.track {
 		display: inline-flex;
 		width: max-content;
