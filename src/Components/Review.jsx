@@ -113,7 +113,7 @@ const Wrapper = styled.div`
 		}
 	}
 `;
-const ReviewCarousel = () => {
+const ReviewCarousel = ({ isPolish }) => {
 	return (
 		<Wrapper>
 			<div className="track">

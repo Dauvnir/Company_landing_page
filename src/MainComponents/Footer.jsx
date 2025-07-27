@@ -101,7 +101,7 @@ const Wrapper = styled.footer`
 	}
 `;
 
-const Footer = () => {
+const Footer = ({ isPolish }) => {
 	return (
 		<Wrapper>
 			<div>
@@ -117,21 +117,21 @@ const Footer = () => {
 					<a href="#homeLink">Home</a>
 				</li>
 				<li>
-					<a href="#servicesLink">Services</a>
+					<a href="#servicesLink">{isPolish ? "Usługi" : "Services"}</a>
 				</li>
 				<li>
-					<a href="#aboutusLink">About us</a>
+					<a href="#aboutusLink">{isPolish ? "O nas" : "About us"}</a>
 				</li>
 				<li>
-					<a href="#contactLink">Contact</a>
+					<a href="#contactLink">{isPolish ? "Kontakt" : "Contact"}</a>
 				</li>
 			</ul>
 			<p id="privacy">
-				<u> Privacy and cookies</u>
+				<u>{isPolish ? "Polityka prywatności i pliki cookies" : "Privacy and cookies"}</u>
 				<br />
-				Topus ul. Mydlana 1, 51-502 Wrocław, Polska
+				ul. Mydlana 1, 51-502 Wrocław, Polska
 			</p>
-			<p id="copyright">Copyright @ProLabel 2025</p>
+			<p id="copyright">{isPolish ? "Wszelkie prawa zastrzeżone © ProLabel 2025" : "Copyright © ProLabel 2025"}</p>
 		</Wrapper>
 	);
 };

@@ -19,10 +19,10 @@ const Wrapper = styled.section`
 	}
 `;
 
-const TrustedBySection = () => {
+const TrustedBySection = ({ isPolish }) => {
 	return (
 		<Wrapper>
-			<h3>Trusted By</h3>
+			<h3>{isPolish ? "Zaufali nam" : "Trusted by"}</h3>
 			<Logos />
 		</Wrapper>
 	);

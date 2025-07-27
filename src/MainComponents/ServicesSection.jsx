@@ -19,11 +19,11 @@ const Wrapper = styled.section`
 	}
 `;
 
-const ServicesSection = () => {
+const ServicesSection = ({ isPolish }) => {
 	return (
 		<Wrapper id="servicesLink">
-			<h3>Services</h3>
-			<Services />
+			<h3>{isPolish ? "Usługi" : "Services"}</h3>
+			<Services isPolish={isPolish} />
 		</Wrapper>
 	);
 };

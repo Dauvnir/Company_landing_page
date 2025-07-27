@@ -156,7 +156,10 @@ const Wrapper = styled.div`
 	}
 `;
 
-const NavigationMenu = () => {
+const NavigationMenu = ({ fetchLang }) => {
+	const [isPolish, setPolishLang] = useState(null);
+	const [width, setWidth] = useState(null);
+
 	const [menuState, setMenuState] = useState(false);
 	const menuStateHandler = () => {
 		setMenuState(!menuState);
@@ -165,10 +168,20 @@ const NavigationMenu = () => {
 	const [isMobile, setIsMobile] = useState(true);
 
 	useEffect(() => {
-		const width = window.innerWidth;
-		width && width > 1023 ? setIsMobile(false) : setIsMobile(true);
+		const innerWidth = window.innerWidth;
+		innerWidth && innerWidth > 1023 ? setIsMobile(false) : setIsMobile(true);
+		setWidth(innerWidth);
+	}, [width]);
+
+	// run only once to check if is it polish lang else use default one
+	useEffect(() => {
+		const lang = navigator.language;
+		lang !== "pl-PL" ? setPolishLang(false) : setPolishLang(true);
 	}, []);
 
+	useEffect(() => {
+		fetchLang(isPolish);
+	}, [isPolish]);
 	return (
 		<Wrapper menuState={menuState} isMobile={isMobile}>
 			<img src="logoprolabel.png" alt="Prolabel" />
@@ -182,17 +195,17 @@ const NavigationMenu = () => {
 						<a href="#homeLink">Home</a>
 					</li>
 					<li>
-						<a href="#servicesLink">Services</a>
+						<a href="#servicesLink">{isPolish ? "Usługi" : "Services"}</a>
 					</li>
 					<li>
-						<a href="#aboutusLink">About Us</a>
+						<a href="#aboutusLink">{isPolish ? "O nas" : "About us"}</a>
 					</li>
 					<li>
-						<a href="#contactLink">Contact</a>
+						<a href="#contactLink">{isPolish ? "Kontakt" : "Contact"}</a>
 					</li>
 				</ul>
-				<button>
-					<span>PL</span>
+				<button onClick={() => setPolishLang(!isPolish)}>
+					<span>{isPolish ? "PL" : "EN"}</span>
 				</button>
 			</div>
 			<div id="extendedMenu">
@@ -201,17 +214,17 @@ const NavigationMenu = () => {
 						<a href="#homeLink">Home</a>
 					</li>
 					<li>
-						<a href="#servicesLink">Services</a>
+						<a href="#servicesLink">{isPolish ? "Usługi" : "Services"}</a>
 					</li>
 					<li>
-						<a href="#aboutusLink">About Us</a>
+						<a href="#aboutusLink">{isPolish ? "O nas" : "About us"}</a>
 					</li>
 					<li>
-						<a href="#contactLink">Contact</a>
+						<a href="#contactLink">{isPolish ? "Kontakt" : "Contact"}</a>
 					</li>
 				</ul>
-				<button>
-					<span>PL</span>
+				<button onClick={() => setPolishLang(!isPolish)}>
+					<span>{isPolish ? "PL" : "EN"}</span>
 				</button>
 			</div>
 		</Wrapper>

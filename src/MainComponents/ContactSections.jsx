@@ -69,16 +69,16 @@ const Wrapper = styled.section`
 	}
 `;
 
-const ContactSection = () => {
+const ContactSection = ({ isPolish }) => {
 	return (
 		<Wrapper id="contactLink">
 			<div className="contact">
-				<h3>Contact</h3>
-				<Form />
+				<h3>{isPolish ? "Kontakt" : "Contact"}</h3>
+				<Form isPolish={isPolish} />
 			</div>
 			<div className="contact grow">
-				<h3>Find Us</h3>
-				<Map />
+				<h3>{isPolish ? "Znajdź nas" : "Find Us"}</h3>
+				<Map isPolish={isPolish} />
 			</div>
 
 			<div id="bgImage">

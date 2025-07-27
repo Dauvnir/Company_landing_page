@@ -16,10 +16,10 @@ const Wrapper = styled.section`
 	overflow: hidden;
 `;
 
-const WelcomeSection = () => {
+const WelcomeSection = ({ fetchLang }) => {
 	return (
 		<Wrapper id="homeLink">
-			<NavigationMenu />
+			<NavigationMenu fetchLang={fetchLang} />
 			<WelcomeMessage />
 		</Wrapper>
 	);

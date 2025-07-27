@@ -19,11 +19,11 @@ const Wrapper = styled.section`
 	}
 `;
 
-const ReviewsSection = () => {
+const ReviewsSection = ({ isPolish }) => {
 	return (
 		<Wrapper>
-			<h3>Reviews</h3>
-			<ReviewCarousel />
+			<h3>{isPolish ? "Recenzje" : "Reviews"}</h3>
+			<ReviewCarousel isPolish={isPolish} />
 		</Wrapper>
 	);
 };

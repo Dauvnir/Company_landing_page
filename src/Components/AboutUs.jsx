@@ -46,7 +46,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-const AboutUs = () => {
+const AboutUs = ({ isPolish }) => {
 	return (
 		<Wrapper>
 			<div>
@@ -54,8 +54,9 @@ const AboutUs = () => {
 			</div>
 			<p>
 				<span>
-					From large-format printing and CNC cutting to custom stickers, labels, and magnets — we design, print, and create tailored solutions that
-					stick. Need something unique? You can even design it yourself with our easy online creator.
+					{isPolish
+						? "Od druku wielkoformatowego i cięcia CNC po spersonalizowane naklejki, etykiety i magnesy — projektujemy, drukujemy i tworzymy rozwiązania dopasowane do Twoich potrzeb. Potrzebujesz czegoś wyjątkowego? Skorzystaj z naszego prostego kreatora online i zaprojektuj to sam."
+						: "From large-format printing and CNC cutting to custom stickers, labels, and magnets — we design, print, and create tailored solutions that stick. Need something unique? You can even design it yourself with our easy online creator."}
 				</span>
 			</p>
 		</Wrapper>

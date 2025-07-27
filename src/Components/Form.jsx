@@ -84,16 +84,15 @@ const Wrapper = styled.form`
 		border: none;
 	}
 `;
-
-const Form = () => {
+const Form = ({ isPolish }) => {
 	return (
 		<Wrapper>
-			<input type="text" id="name" name="name" autoComplete="off" placeholder="Name and surname" />
-			<input type="text" id="phone" name="phone" autoComplete="off" placeholder="Phone number" />
-			<input type="text" id="email" name="email" autoComplete="off" placeholder="Email address" />
-			<textarea name="message" id="message" autoComplete="off" placeholder="Message"></textarea>
+			<input type="text" id="name" name="name" autoComplete="off" placeholder={isPolish ? "Imię i nazwisko" : "Name and surname"} />
+			<input type="text" id="phone" name="phone" autoComplete="off" placeholder={isPolish ? "Numer telefonu" : "Phone number"} />
+			<input type="text" id="email" name="email" autoComplete="off" placeholder={isPolish ? "Adres e-mail" : "Email address"} />
+			<textarea name="message" id="message" autoComplete="off" placeholder={isPolish ? "Wiadomość" : "Message"}></textarea>
 			<button type="submit">
-				<span>Send</span>
+				<span>{isPolish ? "Wyślij" : "Send"}</span>
 			</button>
 		</Wrapper>
 	);

@@ -21,8 +21,8 @@ const Wrapper = styled.div`
 
 		justify-self: center;
 
-		width: 15.5rem;
-		height: 15.5rem;
+		width: 16rem;
+		height: 16rem;
 
 		border-radius: 15px;
 		padding: 1rem;
@@ -85,38 +85,52 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Services = () => {
+const Services = ({ isPolish }) => {
 	return (
 		<Wrapper>
 			<div className="service">
 				<img src="plotter.png" alt="plotter" />
-				<h4>Plotter Printing</h4>
-				<p>Large-format prints for banners, posters, stickers & more.</p>
+				<h4>{isPolish ? "Druk Ploterowy" : "Plotter Printing"}</h4>
+				<p>
+					{isPolish ? "Wydruki wielkoformatowe na banery, plakaty, naklejki i więcej." : "Large-format prints for banners, posters, stickers & more."}
+				</p>
 			</div>
 			<div className="service">
 				<img src="cnc.png" alt="cnc" />
-				<h4>CNC Cutting</h4>
-				<p>Precision cutting for cardboard, PVC, foam, vinyl & more.</p>
+				<h4>{isPolish ? "Cięcie CNC" : "CNC Cutting"}</h4>
+				<p>
+					{isPolish
+						? "Precyzyjne cięcie kartonu, PVC, pianki, winylu i innych materiałów."
+						: "Precision cutting for cardboard, PVC, foam, vinyl & more."}
+				</p>
 			</div>
 			<div className="service">
 				<img src="thinkingBubble.png" alt="Custom_requests" />
-				<h4>Custom Requests</h4>
-				<p>Got something unique in mind? Let’s make it happen.</p>
+				<h4>{isPolish ? "Zamówienia Indywidualne" : "Custom Requests"}</h4>
+				<p>{isPolish ? "Masz nietypowy pomysł? Zrealizujemy go razem." : "Got something unique in mind? Let’s make it happen."}</p>
 			</div>
 			<div className="service">
-				<img src="design2.png" alt="plotter" />
-				<h4>Sticker Design</h4>
-				<p>Got something unique in mind? Let’s make it happen.</p>
+				<img src="design2.png" alt="sticker design" />
+				<h4>{isPolish ? "Projekt Naklejek" : "Sticker Design"}</h4>
+				<p>{isPolish ? "Stwórz własny projekt lub powierz go nam." : "Got something unique in mind? Let’s make it happen."}</p>
 			</div>
 			<div className="service">
-				<img src="design.png" alt="plotter" />
-				<h4>Personal Creator</h4>
-				<p>Design your own stickers, labels & more — right on our website.</p>
+				<img src="design.png" alt="personal creator" />
+				<h4>{isPolish ? "Kreator Osobisty" : "Personal Creator"}</h4>
+				<p>
+					{isPolish
+						? "Zaprojektuj własne naklejki, etykiety i więcej — bezpośrednio na naszej stronie."
+						: "Design your own stickers, labels & more — right on our website."}
+				</p>
 			</div>
 			<div className="service">
-				<img src="magnet.png" alt="plotter" />
-				<h4>Magnetic Products</h4>
-				<p>Fully custom magnets — from print to cut, ready for display or promo use.</p>
+				<img src="magnet.png" alt="magnetic products" />
+				<h4>{isPolish ? "Magnesy na zamówienie" : "Custom Magnets"}</h4>
+				<p>
+					{isPolish
+						? "Personalizowane magnesy — od projektu po cięcie."
+						: "Fully custom magnets — from print to cut, ready for display or promo use."}
+				</p>
 			</div>
 			<div id="image">
 				<img src="ABOUT2.png" alt="" />

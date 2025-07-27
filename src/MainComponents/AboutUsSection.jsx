@@ -51,11 +51,11 @@ const Wrapper = styled.section`
 	}
 `;
 
-const AboutUsSection = () => {
+const AboutUsSection = ({ isPolish }) => {
 	return (
 		<Wrapper id="aboutusLink">
-			<h3>About us</h3>
-			<AboutUs />
+			<h3>{isPolish ? "O nas" : "About us"}</h3>
+			<AboutUs isPolish={isPolish} />
 			<img id="bgImg" src="hand.png" alt="hand" />
 			<div id="glass"></div>
 		</Wrapper>
