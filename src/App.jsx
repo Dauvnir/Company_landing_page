@@ -16,9 +16,9 @@ function App() {
 		setPolishLang(arg);
 	};
 
-	useEffect(() => {
-		console.log(polishLang);
-	}, [polishLang]);
+	// useEffect(() => {
+	// 	console.log(polishLang);
+	// }, [polishLang]);
 
 	return (
 		<>

@@ -175,7 +175,7 @@ const Form = ({ isPolish }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (validate()) {
-			console.log("Form is valid", formData);
+			// console.log("Form is valid", formData);
 			setShowConfirmation(true);
 			setFormData({ name: "", phone: "", email: "", message: "" });
 		}

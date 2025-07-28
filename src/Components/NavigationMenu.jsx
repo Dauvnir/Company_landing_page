@@ -13,7 +13,9 @@ const AuraPulsing = keyframes`
 	box-shadow: none;
   }`;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div.withConfig({
+	shouldForwardProp: (prop) => !["isMobile", "menuState"].includes(prop),
+})`
 	display: inline-flex;
 	position: relative;
 
