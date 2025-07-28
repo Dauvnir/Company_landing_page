@@ -7,7 +7,7 @@ import TrustedBySection from "./MainComponents/TrustedBySection";
 import WelcomeSection from "./MainComponents/WelcomeSection";
 import Footer from "./MainComponents/Footer";
 import { useEffect, useState } from "react";
-
+import AnimateSections from "./Components/AnimateSections";
 //lang => isPolish  true or false
 function App() {
 	const [polishLang, setPolishLang] = useState(false);
@@ -23,11 +23,21 @@ function App() {
 	return (
 		<>
 			<WelcomeSection fetchLang={fetchLang} />
-			<ServicesSection isPolish={polishLang} />
-			<TrustedBySection isPolish={polishLang} />
-			<AboutUsSection isPolish={polishLang} />
-			<ReviewsSection isPolish={polishLang} />
-			<ContactSection isPolish={polishLang} />
+			<AnimateSections>
+				<ServicesSection isPolish={polishLang} />
+			</AnimateSections>
+			<AnimateSections>
+				<TrustedBySection isPolish={polishLang} />
+			</AnimateSections>
+			<AnimateSections>
+				<AboutUsSection isPolish={polishLang} />
+			</AnimateSections>
+			<AnimateSections>
+				<ReviewsSection isPolish={polishLang} />
+			</AnimateSections>
+			<AnimateSections>
+				<ContactSection isPolish={polishLang} />
+			</AnimateSections>
 			<Footer isPolish={polishLang} />
 		</>
 	);
