@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -12,15 +12,16 @@ const Wrapper = styled.div`
 
 	gap: 0.5rem;
 	flex-grow: 1;
+
 	h4,
 	p {
 		color: black;
 		text-shadow: none;
 		text-align: left;
-
 		text-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 	}
 `;
+
 const GoogleMaps = styled.div`
 	iframe {
 		height: 20rem;
@@ -28,7 +29,6 @@ const GoogleMaps = styled.div`
 		object-fit: contain;
 
 		border-radius: 10px;
-
 		box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25);
 	}
 `;
@@ -47,7 +47,16 @@ const Placeholder = styled.div`
 `;
 
 const Map = ({ isPolish }) => {
-	const [mapLoaded, setMapLoaded] = useState(false);
+	const [shouldLoadMap, setShouldLoadMap] = useState(false);
+
+	useEffect(() => {
+		if ("requestIdleCallback" in window) {
+			requestIdleCallback(() => setShouldLoadMap(true));
+		} else {
+			setTimeout(() => setShouldLoadMap(true), 2000);
+		}
+	}, []);
+
 	return (
 		<Wrapper>
 			<h4>
@@ -58,12 +67,14 @@ const Map = ({ isPolish }) => {
 				{isPolish ? "Godziny pracy: Pon-Pt 8:00-16:00" : "Working hours: Mon-Fri 8:00-16:00"}
 			</p>
 			<GoogleMaps>
-				{!mapLoaded && <Placeholder>Map loading...</Placeholder>}
-				<iframe
-					style={{ display: mapLoaded ? "block" : "none" }}
-					src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=51-502,%20Mydlana%201,%20Wroc%C5%82aw+(ProLabel)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-					onLoad={() => setMapLoaded(true)}
-				></iframe>
+				{shouldLoadMap ? (
+					<iframe
+						src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=51-502,%20Mydlana%201,%20Wroc%C5%82aw+(ProLabel)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+						loading="lazy"
+					></iframe>
+				) : (
+					<Placeholder>Map loading...</Placeholder>
+				)}
 			</GoogleMaps>
 		</Wrapper>
 	);
