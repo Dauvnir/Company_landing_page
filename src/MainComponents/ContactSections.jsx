@@ -82,7 +82,7 @@ const ContactSection = ({ isPolish }) => {
 			</div>
 
 			<div id="bgImage">
-				<img src="colorBloom.png" alt="bgImage" />
+				<img src="colorBloom.png" alt="bgImage" loading="lazy" />
 			</div>
 		</Wrapper>
 	);

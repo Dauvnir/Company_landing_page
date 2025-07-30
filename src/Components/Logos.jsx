@@ -75,17 +75,17 @@ const Logos = () => {
 			<div className="track">
 				<div className="carousel">
 					{logos.map((src, idx) => (
-						<img key={idx} src={src} alt={`logo-${idx}`} />
+						<img key={idx} src={src} alt={`logo-${idx}`} loading="lazy" />
 					))}
 				</div>
 				<div className="carousel">
 					{logos.map((src, idx) => (
-						<img key={idx + logos.length} src={src} alt={`logo-${idx}`} />
+						<img key={idx + logos.length} src={src} alt={`logo-${idx}`} loading="lazy" />
 					))}
 				</div>
 				<div className="carousel">
 					{logos.map((src, idx) => (
-						<img key={idx + logos.length} src={src} alt={`logo-${idx}`} />
+						<img key={idx + logos.length} src={src} alt={`logo-${idx}`} loading="lazy" />
 					))}
 				</div>
 			</div>

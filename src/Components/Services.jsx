@@ -133,7 +133,7 @@ const Services = ({ isPolish }) => {
 				</p>
 			</div>
 			<div id="image">
-				<img src="ABOUT2.png" alt="" />
+				<img src="ABOUT2.png" alt="" loading="lazy" />
 			</div>
 		</Wrapper>
 	);

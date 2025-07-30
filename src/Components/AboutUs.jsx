@@ -50,7 +50,7 @@ const AboutUs = ({ isPolish }) => {
 	return (
 		<Wrapper>
 			<div>
-				<img id="cncTeam" src="cncTeam.jpeg" alt="teamImage" />
+				<img id="cncTeam" src="cncTeam.jpeg" alt="teamImage" loading="lazy" />
 			</div>
 			<p>
 				<span>
