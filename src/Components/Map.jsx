@@ -35,7 +35,7 @@ const Map = ({ isPolish }) => {
 	return (
 		<Wrapper>
 			<h4>
-				ProLabel <br /> Grzegorz Mączyński
+				ProLabel <br /> Patryk Polak
 			</h4>
 			<p>
 				ul. Mydlana 1 <br /> 51-502 Wrocław, Poland <br /> tel. +48 555 555 555 <br />

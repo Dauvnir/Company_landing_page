@@ -22,7 +22,7 @@ function App() {
 
 	return (
 		<>
-			<WelcomeSection fetchLang={fetchLang} />
+			<WelcomeSection fetchLang={fetchLang} isPolish={polishLang} />
 			<AnimateSections>
 				<ServicesSection isPolish={polishLang} />
 			</AnimateSections>

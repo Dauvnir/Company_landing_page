@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 	.track {
 		display: flex;
 		width: fit-content;
-		animation: ${carousel} 25s linear infinite;
+		animation: ${carousel} 70s linear infinite;
 	}
 
 	.carousel {

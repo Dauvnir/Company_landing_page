@@ -60,25 +60,35 @@ const Wrapper = styled.div`
 				place-items: center;
 				span {
 					font-size: 1.5rem;
+					white-space: wrap;
 				}
 			}
 		}
 	}
 `;
-const WelcomeMessage = () => {
+const WelcomeMessage = ({ isPolish }) => {
 	return (
 		<Wrapper>
 			<header>
-				<h1>Your Trusted Online Printing Partner</h1>
+				<h1>{isPolish ? "Twój Zaufany Partner w Druku Online" : "Your Trusted Online Printing Partner"}</h1>
 				<h2>
-					Labels, stickers, and more — <br /> printed fast, delivered faster.
+					{isPolish ? (
+						<>
+							Etykiety, naklejki i nie tylko <br /> drukujemy szybko, dostarczamy jeszcze szybciej.
+						</>
+					) : (
+						<>
+							Labels, stickers, and more — <br />
+							printed fast, delivered faster.
+						</>
+					)}
 				</h2>
 			</header>
 
 			<div>
 				<button>
 					<a href="#contactLink">
-						<span>Contact Us</span>
+						<span>{isPolish ? "Napisz do nas" : "Contact Us"}</span>
 					</a>
 				</button>
 			</div>

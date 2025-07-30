@@ -16,11 +16,11 @@ const Wrapper = styled.section`
 	overflow: hidden;
 `;
 
-const WelcomeSection = ({ fetchLang }) => {
+const WelcomeSection = ({ fetchLang, isPolish }) => {
 	return (
 		<Wrapper id="homeLink">
 			<NavigationMenu fetchLang={fetchLang} />
-			<WelcomeMessage />
+			<WelcomeMessage isPolish={isPolish} />
 		</Wrapper>
 	);
 };

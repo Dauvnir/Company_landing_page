@@ -170,10 +170,18 @@ const NavigationMenu = ({ fetchLang }) => {
 	const [isMobile, setIsMobile] = useState(true);
 
 	useEffect(() => {
-		const innerWidth = window.innerWidth;
-		innerWidth && innerWidth > 1023 ? setIsMobile(false) : setIsMobile(true);
-		setWidth(innerWidth);
-	}, [width]);
+		const handleResize = () => {
+			const currentWidth = window.innerWidth;
+			setWidth(currentWidth);
+			setIsMobile(currentWidth <= 1023);
+		};
+
+		handleResize();
+
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 
 	// run only once to check if is it polish lang else use default one
 	useEffect(() => {
