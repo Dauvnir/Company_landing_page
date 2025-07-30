@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -31,7 +32,22 @@ const GoogleMaps = styled.div`
 		box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25);
 	}
 `;
+
+const Placeholder = styled.div`
+	height: 20rem;
+	width: clamp(18rem, 8.871rem + 48.69vw, 40rem);
+	border-radius: 10px;
+	background: #f0f0f0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	color: #777;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25);
+`;
+
 const Map = ({ isPolish }) => {
+	const [mapLoaded, setMapLoaded] = useState(false);
 	return (
 		<Wrapper>
 			<h4>
@@ -42,7 +58,12 @@ const Map = ({ isPolish }) => {
 				{isPolish ? "Godziny pracy: Pon-Pt 8:00-16:00" : "Working hours: Mon-Fri 8:00-16:00"}
 			</p>
 			<GoogleMaps>
-				<iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=51-502,%20Mydlana%201,%20Wroc%C5%82aw+(ProLabel)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+				{!mapLoaded && <Placeholder>Map loading...</Placeholder>}
+				<iframe
+					style={{ display: mapLoaded ? "block" : "none" }}
+					src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=51-502,%20Mydlana%201,%20Wroc%C5%82aw+(ProLabel)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+					onLoad={() => setMapLoaded(true)}
+				></iframe>
 			</GoogleMaps>
 		</Wrapper>
 	);
