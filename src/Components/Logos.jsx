@@ -5,7 +5,7 @@ const carousel = keyframes`
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(-33.33%);
+		transform: translateX(-25%);
 	}
 `;
 
@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 	.track {
 		display: flex;
 		width: fit-content;
-		animation: ${carousel} 70s linear infinite;
+		animation: ${carousel} 60s linear infinite;
 	}
 
 	.carousel {
@@ -76,6 +76,11 @@ const Logos = () => {
 				<div className="carousel">
 					{logos.map((src, idx) => (
 						<img key={idx} src={src} alt={`logo-${idx}`} loading="lazy" />
+					))}
+				</div>
+				<div className="carousel">
+					{logos.map((src, idx) => (
+						<img key={idx + logos.length} src={src} alt={`logo-${idx}`} loading="lazy" />
 					))}
 				</div>
 				<div className="carousel">

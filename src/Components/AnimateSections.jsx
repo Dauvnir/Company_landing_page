@@ -26,7 +26,7 @@ const AnimateSections = ({ children }) => {
 					observer.unobserve(entry.target);
 				}
 			},
-			{ threshold: 0.25 }
+			{ threshold: 0.15 }
 		);
 
 		if (ref.current) observer.observe(ref.current);

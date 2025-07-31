@@ -207,6 +207,34 @@ const ReviewCarousel = ({ isPolish }) => {
 						</p>
 					</div>
 				</div>
+
+				<div className="reviewBlock">
+					<p className="review">
+						{isPolish
+							? "Współpraca z ProLabel przebiegła sprawnie i profesjonalnie. Zdecydowanie godni polecenia."
+							: "Cooperation with ProLabel was smooth and professional. Definitely a company worth recommending."}
+					</p>
+					<div>
+						<p className="logo">
+							<img src="allegroLogo.png" alt="allegro" />
+							<strong>Katarzyna</strong>
+						</p>
+					</div>
+				</div>
+
+				<div className="reviewBlock">
+					<p className="review">
+						{isPolish
+							? "Doceniamy terminowość realizacji oraz wysoką jakość druku. Solidny partner biznesowy."
+							: "We appreciate the timely execution and high print quality. A reliable business partner."}
+					</p>
+					<div>
+						<p className="logo">
+							<img src="fmWorld_logo.png" alt="fm world" />
+							<strong>Marek</strong>
+						</p>
+					</div>
+				</div>
 			</div>
 			<div className="track">
 				<div className="reviewBlock">
@@ -289,6 +317,34 @@ const ReviewCarousel = ({ isPolish }) => {
 						<p className="logo">
 							<img src="schilsner_logo.png" alt="schilsner" />
 							<strong>Łucja</strong>
+						</p>
+					</div>
+				</div>
+
+				<div className="reviewBlock">
+					<p className="review">
+						{isPolish
+							? "Współpraca z ProLabel przebiegła sprawnie i profesjonalnie. Zdecydowanie godni polecenia."
+							: "Cooperation with ProLabel was smooth and professional. Definitely a company worth recommending."}
+					</p>
+					<div>
+						<p className="logo">
+							<img src="allegroLogo.png" alt="allegro" />
+							<strong>Katarzyna</strong>
+						</p>
+					</div>
+				</div>
+
+				<div className="reviewBlock">
+					<p className="review">
+						{isPolish
+							? "Doceniamy terminowość realizacji oraz wysoką jakość druku. Solidny partner biznesowy."
+							: "We appreciate the timely execution and high print quality. A reliable business partner."}
+					</p>
+					<div>
+						<p className="logo">
+							<img src="fmWorld_logo.png" alt="fm world" />
+							<strong>Marek</strong>
 						</p>
 					</div>
 				</div>

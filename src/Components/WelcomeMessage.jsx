@@ -17,6 +17,9 @@ const Wrapper = styled.div`
 	flex-grow: 1;
 
 	padding-inline: clamp(0.5rem, -0.122rem + 3.31vw, 2rem); //300 px to 1024px calculated
+
+	position: relative;
+	z-index: 2;
 	header {
 		width: 100%;
 		height: 60%;

@@ -26,6 +26,7 @@ const Wrapper = styled.div.withConfig({
 	box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
 
 	padding-inline: clamp(0.5rem, -0.122rem + 3.31vw, 2rem); //300 px to 1024px calculated
+
 	img {
 		height: 100%;
 		width: auto;
@@ -105,7 +106,7 @@ const Wrapper = styled.div.withConfig({
 	}
 	#extendedMenu {
 		position: absolute;
-		z-index: 2;
+		z-index: 3;
 		top: 5rem;
 		right: ${(props) => (props.menuState ? 0 : "-100%")};
 
