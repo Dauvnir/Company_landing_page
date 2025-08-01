@@ -21,6 +21,8 @@ const Wrapper = styled.section`
 
 	position: relative;
 
+	scroll-margin-top: 5rem;
+
 	.contact {
 		display: flex;
 		justify-content: start;
